@@ -62,7 +62,7 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
       }
     };
     if (type === "recordings") fetchRecordings();
-  }, [type, callRecordings]);
+  }, [type, callRecordings, toast]);
 
   const calls = getCalls();
   const noCallsMessage = getNoCallsMessage();
@@ -102,7 +102,7 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
             link={
               type === "recordings"
                 ? meeting.url
-                : `${process.env.NEXT_PUBLIC_URL}/meeting/${meeting.id}`
+                : `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meeting.id}`
             }
           />
         ))
