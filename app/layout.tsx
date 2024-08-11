@@ -28,7 +28,7 @@ export default function RootLayout({
       <ClerkProvider
         appearance={{
           layout: {
-            logoImageUrl: "/icons/yoom-logo.svg",
+            logoImageUrl: "/icons/lens-logo.png",
             socialButtonsVariant: "iconButton",
           },
           variables: {
